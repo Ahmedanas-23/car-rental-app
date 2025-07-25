@@ -31,7 +31,7 @@ const UserCltr = require('./app/user-signup/user-controller/user-controller')
 app.post('/user/signup', UserCltr.Signup );
 
 /// method to login user
-app.post('/user/login', userAuthenticate, UserCltr.Login)
+app.post('/user/login', UserCltr.Login)
 
 
 // app.put("/api/login/:id", async(req, res) => {

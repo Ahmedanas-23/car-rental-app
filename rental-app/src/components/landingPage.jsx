@@ -1,11 +1,7 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 // The user's code uses react-router-dom, but for a self-contained example,
 // we'll simulate the Link component. In a real app, you'd use the library.
-const Link = ({ to, className, children }) => (
-  <a href={to} className={className}>
-    {children}
-  </a>
-);
 
 const LandingPage = () => {
   // State to manage the visibility of the mobile menu
@@ -61,7 +57,7 @@ const LandingPage = () => {
                   Get app
                 </Link>
                 <div className="border border-gray-300 px-4 py-2 md:px-6 rounded-full text-blue-400 hover:bg-blue-400 hover:text-white transition">
-                  <Link to="/auth">Login</Link>
+                  <Link to="/login">Login</Link>
                 </div>
               </div>
 
@@ -128,9 +124,12 @@ const LandingPage = () => {
                 >
                   Get app
                 </Link>
-                <div className="w-4/5 text-center border border-gray-300 px-6 py-2 rounded-full text-blue-400 hover:bg-blue-400 hover:text-white transition">
-                  <Link to="/auth">Login</Link>
-                </div>
+
+                <Link
+                className="w-4/5 text-center border border-gray-300 px-6 py-2 rounded-full text-blue-400 hover:bg-blue-400 hover:text-white transition"
+                to="/login"
+                >Login
+                </Link>
               </div>
             </div>
           </nav>
@@ -138,7 +137,7 @@ const LandingPage = () => {
           {/* Hero Section */}
           <div className="relative flex-grow flex flex-col md:flex-row px-4 py-8 md:px-10 items-center justify-center md:justify-center gap-8">
             {/* Text Content */}
-            <div className="w-full md:w-1/2 text-white text-center md:text-left md:ml-10">
+            <div className="w-full md:w-1/2 text-white text-center md:text-left mt-20 md:ml-10">
               <h2 className="text-3xl md:text-4xl font-bold text-blue-50">
                 What would you like <br />
                 <span className="text-5xl md:text-6xl text-blue-50">Drive?</span>
@@ -150,7 +149,7 @@ const LandingPage = () => {
             </div>
 
             {/* Form Container */}
-            <div className="w-full max-w-md md:w-[45vw] bg-black/30 backdrop-blur-lg text-white p-4 md:p-6 rounded-lg shadow-2xl">
+            <div className="w-full max-w-md md:w-[45vw] bg-black/30 backdrop-blur-lg mt-5 md:mt-20 text-white p-4 md:p-6 rounded-lg shadow-2xl">
               <h2 className="text-xl md:text-2xl font-bold mb-2">
                 Looking for the best rental car?
               </h2>
@@ -162,7 +161,7 @@ const LandingPage = () => {
                 <div className="mb-4">
                   <label className="block text-gray-200 mb-1">Location</label>
                   <input
-                    className="w-full text-lg pl-4 py-2 rounded border border-gray-400 bg-gray-50 text-gray-800 focus:outline-none focus:ring-2 focus:ring-blue-400"
+                    className="w-full text-lg pl-4 py-2 rounded border border-gray-400 bg-gray-50 text-gray-800 focus:outline-none focus:ring-1 focus:ring-blue-400"
                     type="text"
                     placeholder="Enter a city or airport"
                   />
@@ -171,14 +170,14 @@ const LandingPage = () => {
                   <div className="flex-1">
                     <label className="block text-gray-200 mb-1">Trip starts</label>
                     <input
-                      className="py-2 md:w-47 w-full px-2 rounded border border-gray-400 bg-gray-50 text-gray-800 focus:outline-none focus:ring-2 focus:ring-blue-400"
+                      className="py-2 md:w-47 w-full px-2 rounded border border-gray-400 bg-gray-50 text-gray-800 focus:outline-none focus:ring-1 focus:ring-blue-400"
                       type="datetime-local"
                     />
                   </div>
                   <div className="flex-1">
                     <label className="block text-gray-200 mb-1">Trip ends</label>
                     <input
-                      className="md:w-47 py-2 px-2 w-full rounded border border-gray-400 bg-gray-50 text-gray-800 focus:outline-none focus:ring-2 focus:ring-blue-400"
+                      className="md:w-47 py-2 px-2 w-full rounded border border-gray-400 bg-gray-50 text-gray-800 focus:outline-none focus:ring-1 focus:ring-blue-400"
                       type="datetime-local"
                     />
                   </div>

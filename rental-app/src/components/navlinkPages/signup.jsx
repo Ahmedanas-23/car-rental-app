@@ -113,6 +113,9 @@ function signup() {
               value={"Sign up"}
             />
           </div>
+          <div>
+            <p className="text-[15px] text-blue-400">Already have an account? <Link className="text-indigo-900 underline" to={"/login"}>Login</Link></p>
+          </div>
         </form>
       </div>
     </div>
